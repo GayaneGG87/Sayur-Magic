@@ -333,7 +333,7 @@ main .products .products-list .product-card .btn-order:before {
   height: 13px;
   background-color: #ffd655;
   border-radius: 3px;
-  z-index: -1px;
+  z-index: -1;
   bottom: 0;
   left: 30px;
   transition: 0.5s;
@@ -1005,6 +1005,9 @@ main .contacts .contact-content .map-content {
   main .get-in-touch .get-in-container .contact-form .contact-form-content {
     width: 100%;
   }
+  main .get-in-touch .get-in-container .btn-card {
+    text-wrap: nowrap;
+  }
   main .get-in-touch .title {
     margin: 100px 0 140px 0;
   }
@@ -1071,7 +1074,7 @@ main .contacts .contact-content .map-content {
   }
   .popup-container .popup-imgs-content,
   .popup-container .popup-details {
-    width: 80%;
+    width: 100%;
   }
 }
 @media (max-width: 590px) {
@@ -1118,7 +1121,7 @@ main .contacts .contact-content .map-content {
   }
   main .products .products-list {
     flex-wrap: wrap;
-    gap: 20px 7px;
+    gap: 30px 7px;
   }
   main .products .products-list .product-card {
     min-width: 163px;
@@ -1190,8 +1193,8 @@ main .contacts .contact-content .map-content {
   .popup-content,
   .popup-content-blog,
   .popup-content-review {
-    max-width: 95%;
-    margin: 0 auto;
+    margin: 20px;
+    min-width: unset;
   }
   .popup-container-blog,
   .popup-container-review,
