@@ -1,0 +1,33 @@
+
+@mixin flex-box($align: center, $justify: null, $gap:null){
+    display: flex;
+    align-items: $align;
+    @if $justify != null {
+        justify-content: $justify;
+    }
+    @if $gap != null {
+        gap: $gap;
+    }
+}
+
+@mixin flex-column($align: center, $justify: null,  $gap:null){
+    display: flex;
+    flex-direction: column;
+    align-items: $align;
+    @if $justify != null {
+        justify-content: $justify;
+    }
+    @if $gap != null {
+        gap: $gap;
+    }
+}
+
+@mixin part-text-hidden($height: 100%, $lines: 3){
+    line-height: $height;
+    display: -webkit-box;
+    -webkit-line-clamp: $lines; 
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%; 
+}

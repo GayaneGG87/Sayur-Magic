@@ -1,0 +1,113 @@
+// RESET  DEFAULT STYLES
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+body{
+    font-family: 'Montserrat' , sans-serif;
+    background-color: $green-light;
+} 
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px;
+}
+
+  a {
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;      
+  }
+
+  ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+  }
+  
+  button{
+    border: none;
+  }
+
+
+//   Global classes
+  
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1340px;
+    margin: 0 auto;
+    
+}
+
+.title{
+  font: 400 90px/30px 'Montserrat' , sans-serif;
+  color: $green;
+  margin-bottom: 55px;
+  text-align: center;
+  padding: 0 20px;
+
+}
+.title-my{
+  margin-top: 140px;
+  margin-bottom: 160px;
+}
+
+.sub-title{
+  font: 400 26px 'Montserrat' , sans-serif;
+  color: $grey-darker;
+  text-align: center;
+}
+
+.content-title{
+  font: 400 30px/80px 'Montserrat' , sans-serif;
+  color: $green;
+  @include part-text-hidden(80px, 1);
+
+}
+.content-text{
+  font: 300 15px/27px 'Montserrat' , sans-serif;
+  color: $grey-darker;
+  @include part-text-hidden(27px, 3);
+}
+
+.card{
+      padding: 25px;
+      background-color: $white-light;
+      border-radius: 10px;
+      transition: 0.3s;
+        &:hover{
+          background-color: $green;
+          box-shadow: 0px 30px 18px -8px rgba(0, 0, 0,0.1);
+          transform: scale(1.08, 1.08);
+          transition: 0.3s;
+        }
+        &:hover .content-text{
+          color: white;
+        }
+        &:hover .content-title{
+          color: $orange;
+        }
+        &:hover .details{
+          color: $white;
+        }
+
+        &.review-card:hover{
+          transform: scale(1, 1) !important;
+
+        }
+  
+}
+  .btn-card{
+    height: 50px;
+    padding: 0 50px;
+    color: $grey-dark;
+    background-color: $orange;
+    border-radius: 30px;
+    font: 400 20px 'Montserrat' , sans-serif;
+    border: unset;
+  }
+        
